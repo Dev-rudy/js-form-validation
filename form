@@ -1,0 +1,26 @@
+<fieldset>
+<legend>Form:</legend>
+<form action='#' onsubmit=" return justSubmit()">
+<label for="justName">Full name:</label>
+<input type="text" name="justName" id="wow"><br>
+<label for="justAge">Age:</label>
+<input type="number" name="justAge" id="wow2" max-length="3"  ><br>
+
+<button type="submit">Submit form</button>
+
+</form>
+</fieldset>
+<script type="text/javascript">
+
+function justSubmit(){
+ var x=document.getElementById("wow").value;
+ if(x===""){alert("you did not typed anything");return false ;}
+else{ alert("thank you "+" "+ x);}
+
+var y=document.getElementById("wow2").value;
+if(y < 18){alert("ages below 18 is not allowed to enter ");return false;}
+else{alert("welcome");}
+
+}
+
+</script>
